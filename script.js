@@ -65,5 +65,16 @@ $(document).ready(function(){
 		}
 
 		});
+
+	$(".sell").on("click", function(){
+		var fruitId = this.id.slice(4);
+		if (Person[fruitId].length > 0){
+			Person[fruitId].shift();
+			Person.budget += Market[fruitId];
+			$("#userInfo").html("<p>Budget: $" + Person.budget + "</p><p>Apples: " + Person.apples.length + " at an average price of $" + avgArray(Person.apples) + "</p>" + "<p>Oranges: " + Person.oranges.length + " at an average price of $" + avgArray(Person.oranges) + "</p>" + "<p>Bananas: " + Person.bananas.length + " at an average price of $" + avgArray(Person.bananas) + "</p>" + "<p>Pears: " + Person.pears.length + " at an average price of $" + avgArray(Person.pears) + "</p>");
+		}else{
+			alert("You can't sell what you don't have!");
+		}
+	});
 });
 
