@@ -14,10 +14,10 @@ var Person = {
 	oranges: [],
 	bananas: [],
 	pears: [],
-	budget: 100
+	budget: 50
 };
 function priceChange(price){
-	price += randomNumber(-50,50)/100;
+	price += randomNumber(-25,25)/100;
 	if (price > 9.99){
 		price = 9.99;
 	}else if (price < .50){
@@ -34,7 +34,8 @@ function avgArray (array){
 	var sum = array.reduce(function(a,b){
 		return a + b;
 	});
-	return sum / array.length;
+	var avg = Math.round(sum / array.length * 100) / 100;
+	return avg;
 }
 
 $(document).ready(function(){
