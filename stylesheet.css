@@ -1,24 +1,20 @@
-.btn {
-    display:inline-block;
-    margin: 50px 0px 0px 70px;
-    width: 15%;
-    border: 1px solid ;
-    text-align: center;
-    padding: 1em 0 0 0;
+body {
+    background: url("background.jpg");
+}
+
+.mytitle {
+    font-size: 10em;
+}
+
+.market {
+    margin-top: 4em;
+    margin-bottom: 4em;
 }
 
 #userInfo {
-
     text-align: center;
-
-}
-
-#container {
-
-    margin: 0 auto 0 auto;
-    width: 80%;
-}
-h1 {
-
-    text-align: center;
+    width: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
